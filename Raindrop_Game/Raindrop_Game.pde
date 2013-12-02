@@ -10,4 +10,9 @@ void draw() {
   for (int i = 0; i < drops.length; i++) {
     drops[i].display
 }
+c.display();
+r.display();
+r.drop();
+r.reset();
+}
 
