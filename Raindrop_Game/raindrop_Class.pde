@@ -1,8 +1,8 @@
-class raindrop {
+class Raindrop {
   PVector loc, vel, acc;
   int d;
 
-  raindrop() {
+  Raindrop() {
     d = 25;
     loc = new PVector (random(0, displayWidth), 0);
     vel = new PVector (0, random(0, 4));
@@ -19,9 +19,10 @@ class raindrop {
   }
 
   void reset() {
-    if (loc.y > height) {
-      loc.y = 0;
+    loc.set( random(width), 0);
+    vel.set(0, random(1, 3));
     }
   }
-}
+
+
 

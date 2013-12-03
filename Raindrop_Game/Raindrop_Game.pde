@@ -1,18 +1,18 @@
-raindrop[] drops = new raindrop [10];
+Raindrop[] r = new Raindrop [10];
 void setup() {
   size(displayWidth, displayHeight);
-  for (int i = 0; i < flakes.length; i++) {
-    drops [i] = new raindrop();
+  for (int i = 0; i < r.length; i++) {
+    r[i] = new Raindrop();
   }
 }
 
 void draw() {
-  for (int i = 0; i < drops.length; i++) {
-    drops[i].display
-}
-c.display();
-r.display();
-r.drop();
-r.reset();
+  for (int i = 0; i < drops.length; i++); 
+  {
+    r[i].display;
+    r[i].drop;
+    r[i].reset;
+  }
+  catcher.display();
 }
 
