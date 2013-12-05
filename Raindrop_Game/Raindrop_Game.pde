@@ -1,18 +1,20 @@
 Raindrop[] r = new Raindrop [10];
+Catcher c;
 void setup() {
-  size(displayWidth, displayHeight);
-  for (int i = 0; i < r.length; i++) {
+  size(500, 500);
+  for (int i = 0; i < r.length; i++){
     r[i] = new Raindrop();
   }
+  c = new Catcher();
 }
 
 void draw() {
-  for (int i = 0; i < drops.length; i++); 
-  {
-    r[i].display;
-    r[i].drop;
-    r[i].reset;
+  for (int i = 0; i < r.length; i++){
+    r[i].display();
+    r[i].drop();
+    r[i].reset();
   }
-  catcher.display();
+  
+  c.display();
 }
 

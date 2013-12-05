@@ -1,4 +1,4 @@
-class catcher {
+class Catcher {
   PVector loc;
   int d;
 
@@ -20,4 +20,6 @@ class catcher {
       return false;
     }
   }
+}
+ 
 

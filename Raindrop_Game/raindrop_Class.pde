@@ -6,7 +6,7 @@ class Raindrop {
     d = 25;
     loc = new PVector (random(0, displayWidth), 0);
     vel = new PVector (0, random(0, 4));
-    acc = new PVector (0);
+    acc = new PVector (0,0);
   }
 
   void display() {
@@ -21,8 +21,7 @@ class Raindrop {
   void reset() {
     loc.set( random(width), 0);
     vel.set(0, random(1, 3));
-    }
   }
-
+}
 
 
