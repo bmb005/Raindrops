@@ -1,11 +1,13 @@
 PImage hoop;
 //Number of balls falling at one time 
 int index = 3;
-int oldTime = 0;
+
 //Interval between drop time .. for timer 
 int threshold = 2000;
 //Array of 500 raindrops
 Raindrop[] r = new Raindrop[500];
+//Declare timer class
+Timer Timer;
 //Declare Catcher Class
 Catcher catcher;
 //Declare Score class
@@ -28,9 +30,8 @@ void setup() {
 void draw() {
   println(threshold);
   background(255);
-  //Drawing functions for score
-  Scoreboard.display();
-
+  
+  //Within arra, display and drop ball
   for (int i = 0; i < index; i++) {
     r[i].display();
     r[i].drop();
@@ -40,19 +41,17 @@ void draw() {
       score++;
       threshold-=10;
     }
-    if (catcher.catchDrop(r[i]) == false) {
+    //If ball missed, move away and icrease score two
+    if (r[i].loc.y >= height) {
       score2++;
+      r[i].loc.set(width*2, 0);
+      r[i].vel.set(0, 0);
+      r[i].acc.set(0, 0);
     }
   }
+  //Display Classes
   catcher.display();
   catcher.update();
-    
-  //Added Timer
-  if (millis() - oldTime > threshold) {
-    if (index < r.length) {
-      index++;
-      oldTime = millis();
-    }
-  }
+  Scoreboard.display();
 }
 

@@ -10,7 +10,7 @@ class Scoreboard {
     image(scoreboard, 98, height/2-150, 300, 100);
     textSize(30);
     fill(0, 108, 245);
-    text(score, width/2-65, height/2-80);
+    text(score, 158, 163);
     text(score2, width/2+65, height/2-70);
   }
 }
