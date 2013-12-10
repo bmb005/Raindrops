@@ -1,11 +1,15 @@
 class Timer {
-  int oldTime = 0;
-  
-  () {
-    =
+  int oldTime;
+  int currentTime;
+  int timeChange;
+
+  Timer() { 
+    oldTime = 0;
   }
 
   void display() {//size(500,500)
+    fill(255);
+    text(millis()/1000.0, 190, 139);
   }
 
   void function() {

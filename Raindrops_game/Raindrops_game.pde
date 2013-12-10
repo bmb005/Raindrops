@@ -1,6 +1,6 @@
 PImage hoop;
 //Number of balls falling at one time 
-int index = 3;
+int index = 1;
 
 //Interval between drop time .. for timer 
 int threshold = 2000;
@@ -24,6 +24,7 @@ void setup() {
   } 
   Scoreboard = new Scoreboard();
   catcher = new Catcher();
+  Timer = new Timer();
   hoop = loadImage("hoop.jpg");
 }
 
@@ -53,5 +54,7 @@ void draw() {
   catcher.display();
   catcher.update();
   Scoreboard.display();
+  Timer.display();
+  Timer.function();
 }
 
