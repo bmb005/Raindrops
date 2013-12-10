@@ -1,16 +1,17 @@
-class Score {
+class Scoreboard {
   PImage scoreboard;
- 
+  int quarter;
 
-  Score() {
+  Scoreboard() {
     scoreboard = loadImage("score.jpg");
   }
 
-  void display() {
-    image(scoreboard, 100, height/2-150, 300, 100);
-    textSize(32);
-    fill(0,108,245);
-    text(score, width/2, height/2);
+  void display() {//size(500,500)
+    image(scoreboard, 98, height/2-150, 300, 100);
+    textSize(30);
+    fill(0, 108, 245);
+    text(score, width/2-65, height/2-80);
+    text(score2, width/2+65, height/2-70);
   }
 }
- 
+

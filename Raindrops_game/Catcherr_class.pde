@@ -8,14 +8,14 @@ class Catcher {
   }
 
   void display() {
-    fill(255);
-    image(hoop, mouseX, loc.y, d, d);
+    fill(255, 137, 46);
+    image(hoop, mouseX-d/2, loc.y-d/2, d, d);
   }
 
   void update() {
     loc.set(mouseX, height-d);
   }
-  boolean catchDrop(Raindrop drop) {
+  boolean catchDrop(Raindrop drop) {//SCORE2 NOT WORKING BECAUSE OF THIS CODE?
     if (loc.dist(drop.loc) < d/2 + drop.d/2) {
       return true;
     }

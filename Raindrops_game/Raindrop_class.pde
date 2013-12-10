@@ -11,8 +11,8 @@ class Raindrop {
   }
 
   void display() {
-    
-    image(ball, loc.x, loc.y, 25, 25);
+    fill(255,137,46);
+    ellipse(loc.x, loc.y, 25, 25);
   }
   void drop() {
     vel.add(acc);
