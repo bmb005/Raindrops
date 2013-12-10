@@ -1,18 +1,18 @@
 class Raindrop {
   PVector loc, vel, acc;
   int d;
-  color c;
+ 
 
   Raindrop() {
     d = 10;
     loc = new PVector(random(width), -d); 
-    vel = new PVector(0, random(1, 2));
-    acc = new PVector(0, .01);
+    vel = new PVector(0, random(1, 5));
+    acc = new PVector(0, .2);
   }
 
   void display() {
-    fill(c);
-    ellipse(loc.x, loc.y, d, d);
+    
+    image(ball, loc.x, loc.y, 25, 25);
   }
   void drop() {
     vel.add(acc);
@@ -24,13 +24,10 @@ class Raindrop {
     vel.set(0, random(1, 3));
   }
 
-  void goAway() {
+  void delete() {
     loc.set(height*2, 0);
     vel.set(0, 0);
     acc.set(0, 0);
-  }
-  void colorChange() {
-    c = color(0, random(100, 255), random(100, 255));
   }
 }
 
