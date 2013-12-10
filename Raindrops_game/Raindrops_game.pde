@@ -1,6 +1,8 @@
+PImage hoop;
+PImage ball;
 int index = 1;
 int oldTime = 0;
-int threshold = 3000;
+int threshold = 2000;
 Raindrop[] r = new Raindrop[500];
 Catcher catcher;
 int score;
@@ -11,6 +13,8 @@ void setup() {
     r[i] = new Raindrop();
   } 
   catcher = new Catcher();
+  hoop = new loadImage("hoop.jpg");
+  ball = new loadImage("ball.jpg");
 }
 
 void draw() {
