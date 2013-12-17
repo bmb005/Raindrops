@@ -15,7 +15,7 @@ class Catcher {
   void update() {
     loc.set(mouseX, height-d);
   }
-  boolean catchDrop(Raindrop drop) {//SCORE2 NOT WORKING BECAUSE OF THIS CODE?
+  boolean catchDrop(Raindrop drop) {
     if (loc.dist(drop.loc) < d/2 + drop.d/2) {
       return true;
     }

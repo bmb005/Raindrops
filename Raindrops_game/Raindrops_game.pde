@@ -35,7 +35,6 @@ void setup() {
 
 void draw() {
   if (start == true) {
-    println(threshold);
     background(255);
 
     //Within arra, display and drop ball
@@ -45,12 +44,12 @@ void draw() {
       //If ball caught, delete from array & increase score
       if (catcher.catchDrop(r[i]) == true) {
         r[i].delete();
-        score++;
+        score+=2;
         threshold-=10;
       }
       //If ball missed, move away and icrease score two
       if (r[i].loc.y >= height) {
-        score2++;
+        score2+=3;
         r[i].loc.set(width*2, 0);
         r[i].vel.set(0, 0);
         r[i].acc.set(0, 0);
@@ -60,13 +59,13 @@ void draw() {
     catcher.display();
     catcher.update();
     Scoreboard.display();
-    Timer.display();
+    Scoreboard.gameover();
     Timer.function();
   }
   else {
     fill(255, 0, 0);
     textSize(50);
-    text("START", width/2-50, height/2);
+    text("START", width/2-73, height/2);
     index = 0;
   }
 }
@@ -75,4 +74,6 @@ void draw() {
 void mousePressed() {
   start = true;
 }
+
+
 
